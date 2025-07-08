@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "pubmed-company-papers"
+version = "0.1.0"
+description = "A tool to fetch PubMed papers with authors affiliated with pharmaceutical/biotech companies"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.2"
+lxml = "^4.9.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+mypy = "^1.5.1"
+flake8 = "^6.0.0"
+black = "^23.7.0"
+
+[tool.poetry.scripts]
+get-papers-list = "pubmed_company_papers.cli:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
